@@ -1,13 +1,13 @@
 package Tarea04;
 import javax.swing.JOptionPane;
 
-public class cobros {
+public class Cobros {
 
     private String cliente;
     private String subscripcion;
     private String registro;
 
-    public cobros(String cliente, String subscripcion, String registro){
+    public Cobros(String cliente, String subscripcion, String registro){
     this.cliente = cliente;
     this.subscripcion  = subscripcion;
     this.registro  = registro;

@@ -12,6 +12,9 @@ public class Main {
         "- Kickboxing","Entrenadores, fisioterapeutas y "+
         "nutricionistas","50 espacios de parqueo"); 
         
+        Usuarios NuevoUsuario = new Usuarios(null, null,
+        null, null, 0);
+        
         byte op = 0;
         
         while (op != 5) {
@@ -47,28 +50,32 @@ public class Main {
                 
                 JOptionPane.showMessageDialog(null,
                 "Apartado de Usuarios");
+
+                byte opcion = Byte.parseByte(JOptionPane.showInputDialog(
+                    "Desea ingresar sus datos personales?" + 
+                    "\n" + "1 = SI  2 = NO"));
+                if (opcion == 1) {
+                    String Nombre;
+                    String Apellidos;
+                    String Cedula;
+                    String Correo_Elec;
+                    int Numero_Tel;
                 
-                String Nombre;
-                String Apellidos;
-                String Cedula;
-                String Correo;
-                int Numero;
+                    Nombre = JOptionPane.showInputDialog("Ingrese su nombre:");
+                    Apellidos = JOptionPane.showInputDialog("Ingrese sus apellidos:");
+                    Cedula = JOptionPane.showInputDialog("Ingrese su cedula:");
+                    Correo_Elec = JOptionPane.showInputDialog("Ingrese su correo: ");
+                    Numero_Tel = Integer.parseInt(JOptionPane.showInputDialog("Ingrese"
+                                                        + "su numero de telefono"));
                 
-                Usuarios NuevoUsuario = new Usuarios( Nombre,Apellidos,Cedula,
-                Correo_Elec,Numero_Tel );
-                
-                Nombre = JOptionPane.showInputDialog("Ingrese su nombre:");
-                Apellidos = JOptionPane.showInputDialog("Ingrese sus apellidos:");
-                Cedula = JOptionPane.showInputDialog("Ingrese su cedula:");
-                Correo = JOptionPane.showInputDialog("Ingrese su correo: ");
-                Numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese"
-                                                                      + "su numero de telefono"));
-                
-                NuevoUsuario.setNombre(Nombre);
-                NuevoUsuario.setApellidos(Apellidos);
-                NuevoUsuario.setCedula(Cedula);
-                NuevoUsuario.setCorreo_Elec(Correo);
-                NuevoUsuario.setNumero_Tel(Numero);
+                    NuevoUsuario.setNombre(Nombre);
+                    NuevoUsuario.setApellidos(Apellidos);
+                    NuevoUsuario.setCedula(Cedula);
+                    NuevoUsuario.setCorreo_Elec(Correo_Elec);
+                    NuevoUsuario.setNumero_Tel(Numero_Tel);
+                } 
+
+               
                 
             }
             if (op == 5) {
