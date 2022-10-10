@@ -1,7 +1,9 @@
 package Tarea04;
+
 import javax.swing.JOptionPane;
 
 // GIMNASIO
+
 public class Main {
     public static void main(String[] args) {
 
@@ -11,6 +13,7 @@ public class Main {
         "nutricionistas","50 espacios de parqueo"); 
         
         byte op = 0;
+        
         while (op != 5) {
             op = Byte.parseByte(JOptionPane.showInputDialog
             ("Bienvenido a GIMNASIO"+"\n"+
@@ -41,7 +44,32 @@ public class Main {
                     
             }
             if (op == 4) {
-                    
+                
+                JOptionPane.showMessageDialog(null,
+                "Apartado de Usuarios");
+                
+                String Nombre;
+                String Apellidos;
+                String Cedula;
+                String Correo;
+                int Numero;
+                
+                Usuarios NuevoUsuario = new Usuarios( Nombre,Apellidos,Cedula,
+                Correo_Elec,Numero_Tel );
+                
+                Nombre = JOptionPane.showInputDialog("Ingrese su nombre:");
+                Apellidos = JOptionPane.showInputDialog("Ingrese sus apellidos:");
+                Cedula = JOptionPane.showInputDialog("Ingrese su cedula:");
+                Correo = JOptionPane.showInputDialog("Ingrese su correo: ");
+                Numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese"
+                                                                      + "su numero de telefono"));
+                
+                NuevoUsuario.setNombre(Nombre);
+                NuevoUsuario.setApellidos(Apellidos);
+                NuevoUsuario.setCedula(Cedula);
+                NuevoUsuario.setCorreo_Elec(Correo);
+                NuevoUsuario.setNumero_Tel(Numero);
+                
             }
             if (op == 5) {
                 JOptionPane.showMessageDialog(null,
