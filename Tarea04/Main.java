@@ -45,7 +45,25 @@ public class Main {
                 }
             }
             if (op == 2) {
-                    
+                JOptionPane.showMessageDialog(null,
+                                              "Bienvenido al Tipo de Pago");
+    
+                var opcion1 = Byte.parseByte(JOptionPane.showInputDialog(
+                "Ingrese la cantidad a cancelar"));
+            var opcion2 = Byte.parseByte(JOptionPane.showInputDialog(
+                "Pago en Tarjeta = 1"+"\n"+
+                "Pago Efectivo =2"));
+        if (opcion2 == 1) {
+            JOptionPane.showInputDialog(
+            "Usted esta pagando:"+ opcion1+  "colones"+"\n"+
+             "en Tarjeta");
+        }
+    if(opcion2 == 2){
+            JOptionPane.showInputDialog(
+            "Usted esta pagando:"+ opcion1+  "colones"+"\n"+
+             "en Efectivo");
+    }
+                
             }
             if (op == 3) {                
                 byte opcion = 0;
