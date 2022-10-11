@@ -14,6 +14,10 @@ public class Main {
         
         Usuarios NuevoUsuario = new Usuarios(null, null,
         null, null, 0);
+
+        Servicios Servicios = new Servicios("Agendar cita con" 
+        +" el nutricionista",
+        "Reservar spa", "Alquiler de lockers");
         
         byte op = 0;
         
@@ -43,8 +47,29 @@ public class Main {
             if (op == 2) {
                     
             }
-            if (op == 3) {
-                    
+            if (op == 3) {                
+                byte opcion = 0;
+                while (opcion != 4) {
+                    opcion = Byte.parseByte(JOptionPane.showInputDialog(
+                    "SERVICIOS" + "\n" +
+                    "Digite el servicio que necesita: "+"\n"+
+                    "1. "+ Servicios.getPlan() + "\n" + 
+                    "2. " + Servicios.getSpa() + "\n" +
+                    "3. " + Servicios.getLockers() + "\n" +
+                    "4. Salir"));
+        
+                if (opcion == 1) {
+                    Servicios.nutri();
+                }
+                if (opcion == 2) {
+                    Servicios.spa();
+                }
+                if (opcion == 3) {
+                    Servicios.lockers();
+                }
+                }
+                
+
             }
             if (op == 4) {
                 
@@ -74,9 +99,6 @@ public class Main {
                     NuevoUsuario.setCorreo_Elec(Correo_Elec);
                     NuevoUsuario.setNumero_Tel(Numero_Tel);
                 } 
-
-               
-                
             }
             if (op == 5) {
                 JOptionPane.showMessageDialog(null,

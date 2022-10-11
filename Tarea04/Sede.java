@@ -48,7 +48,7 @@ public class Sede {
         ("Ingrese horario deseado:");
 
         JOptionPane.showMessageDialog(null,
-        "Nombre: "+ nombre + apellido + "\n" + 
+        "Nombre: "+ nombre + " " + apellido + "\n" + 
         "Horario seleccionado: "+ hora );
     }
 }
